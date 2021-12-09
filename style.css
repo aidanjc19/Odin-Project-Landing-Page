@@ -4,8 +4,15 @@
 }
 
 body {
+    height: 150vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+.main {
     display: flex;
     flex-direction: column;
+    flex: 1 0 auto; /* for main content to take up most of page */
 }
 
 .header, .intro {
@@ -15,6 +22,23 @@ body {
 .header {
     font-size: 24px;
     color: #F9FAF8;
+    height: 50px;
+    flex-shrink: 0; /* to stick header to top */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 90px;
+}
+.header-logo {
+    
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.section {
+    flex: 1;
 }
 
 .intro {
@@ -30,4 +54,12 @@ body {
     font-size: 36px;
     font-style: italic;
     font-weight: lighter;
+    flex: 1;
+}
+
+.footer {
+    height: 50px;
+    flex-shrink: 0; /* to stick footer to bottom */
+    margin-top: auto;
+    background-color: #1F2937;
 }
