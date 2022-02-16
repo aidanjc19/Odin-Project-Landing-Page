@@ -69,7 +69,6 @@ img {
     border: 2px solid #3882F6;
     background-color: #3882F6;
     text-decoration: none;
-    margin: 8px 0;
 }
 
 .intro a:hover {
@@ -90,6 +89,10 @@ h1 {
     margin: 8px 0;
 }
 
+.intro.sub {
+    margin-bottom: 16px;
+}
+
 .info {
     text-align: center;
 }
@@ -98,11 +101,27 @@ h2 {
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
+    margin: 40px 0;
 }
 
 .info-boxes {
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.info img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #3882F6;
+}
+
+.info p {
+    width: 158px;
+    color: #1F2937;
 }
 
 .quote {
