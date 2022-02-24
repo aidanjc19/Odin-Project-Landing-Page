@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 150vh;
+    height: 170vh;
     display: flex;
     flex-direction: column; 
 }
@@ -22,24 +22,47 @@ body {
 .header {
     font-size: 24px;
     color: #F9FAF8;
-    height: 50px;
-    flex-shrink: 0; /* to stick header to top */
+    height: 40px;
+    flex: 0 0 auto; /* to stick header to top */
     display: flex;
     justify-content: space-between;
-    padding: 10px 90px;
+    padding: 10px 70px;
+    align-items: center;
+    margin-top: 1px;
+    flex-wrap: wrap;
+    z-index: 999;
 }
+
+div.separate {
+    color: #F9FAF8;
+    border-top: 1px solid#F9FAF8;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
 .header-logo {
-    
+    font-weight: bold;
 }
 
 ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 30px;
+}
+
+li a:hover {
+    color: #3882F6;
+}
+
+div.between-list {
+    border: none;
+    border-left: 1px solid #F9FAF8;
 }
 
 .section {
     flex: 1;
+    box-sizing: border-box;
 }
 
 .section.intro {
@@ -47,7 +70,6 @@ ul {
     align-items: flex-start;
     justify-content: center;
     gap: 15px;
-    flex: 1;
     padding: 20px;
 }
 
@@ -108,7 +130,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     margin-bottom: 70px;
 }
 
@@ -117,6 +139,7 @@ h2 {
     height: auto;
     border-radius: 10px;
     border: 4px solid #3882F6;
+    background-color: #E5E7EB;
 }
 
 .info p {
@@ -124,21 +147,31 @@ h2 {
     color: #1F2937;
 }
 
-.quote {
+.section.quote {
     background-color: #E5E7EB;
-    flex: 1;
+    padding: 40px 80px;
 }
 
 p.quote {
     font-size: 36px;
     font-style: italic;
     font-weight: lighter;
+    margin-bottom: 40px;
+}
+
+p.creds {
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    font-size: 24px;
+    
 }
 
 .help {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }   
 
 .container {
@@ -152,6 +185,8 @@ p.quote {
     padding: 50px 130px;
     box-sizing: border-box;
     color: #E5E7EB;
+    margin: 40px 0;
+    flex-wrap: wrap;
 }
 
 h3 {
@@ -163,12 +198,27 @@ h3 {
     font-size: 18px;
 }
 
+.left.help {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 .container button {
     border: 2px solid #F9FAF8;
     font-size: 16px;
     font-weight: 550;
+    border-radius: 8px;
+    padding: 8px 24px;
+    color: #F9FAF8;
+    background-color: #3882F6;
 }
 
+.container button:hover {
+    background-color: #F9FAF8;
+    color: #3882F6;
+}
 
 .footer {
     height: 50px;
@@ -180,4 +230,5 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 70px;
+    flex-wrap: wrap;
 }
